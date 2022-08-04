@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+
+<style>
+
+    body {
+        padding:1em;
+        display:block;
+        background-image: linear-gradient( 300deg,rgba(233, 217, 146, 0.548),  rgba(243, 73, 21, 0.8) ) , url(https://www.clarin.com/img/2020/03/25/rlpIU9JzA_1256x620__2.jpg#1585147270918);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .contenedor{
+        width:100%;
+        display:block;
+        margin: 2rem auto 1rem auto;
+    }
+
+    @media (min-width: 300px){
+        .contenedor {
+            max-width: 250px;
+        }
+    }
+
+    @media (min-width: 500px){
+        .contenedor {
+            max-width: 400px;
+        }
+    }
+
+    @media (min-width: 760px){
+        .contenedor {
+            max-width: 650px;
+        }
+    }
+
+    #title {
+        font-family: monospace;
+        font-size:2rem;
+        display: block;
+        text-align:center;
+    }
+
+    #description {
+        font-size: 1.5rem;
+        display: block;
+        text-align:center;
+        padding-bottom: 2rem;
+    }
+
+    #survey-form {
+        background-color: rgb(152, 0, 0, 0.3);
+        display: block;
+        line-height:2rem;
+        font-size:1.4rem;
+        padding:2rem;
+    }
+
+    #name {
+        padding: 0.4em;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 1rem;
+    }
+
+    #email {
+        padding: 0.4em;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 1rem;
+    }
+
+    #number {
+        padding: 0.4em;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 1rem;
+    }
+
+    #dropdown{
+        padding: 0.4em;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 1rem;
+        height:2.5em;
+    }
+
+    .caja-comentarios {
+        width: 100%;
+        height: 5rem;
+    }
+
+    #submit{
+        width: 100%;
+        background-color: rgb(189, 67, 19);
+        height: 3rem;
+    }
+</style>
+
+<body>
+    <div class="contenedor">
+        <h1 id="title">Sorteo 1.000.000 subscriptores</h1>
+        <p id="description">Inscribete y participa por un auto 0 km </p>
+
+        <form id="survey-form">
+            <div>
+                <label id="name-label">Nombre</label>
+                <input type="text" name="nombreUsuario" id="name" required placeholder=" Ingresa tu nombre" required>
+            </div>
+            <div>
+                <label id="email-label">Email</label>
+                <input type="email" name="emailUsuario" id="email" required placeholder=" Ingresa tu email">
+            </div>
+            <div>
+                <label id="number-label">Edad</label>
+                <input type="number" name="edadUsuario" id="number" min="18" max="99" placeholder=" Ingresa tu edad">
+            </div>
+            <div>
+                <label>Ocupación</label>
+                <select id="dropdown" name="ocupacion" required>
+                    <option disabled selected value> A que te dedicas</option>
+                    <option value="estudiante"> Estudiante</option>
+                    <option value="part time"> Trabajo de medio tiempo</option>
+                    <option value="full time"> Trabajo full time</option>
+                    <option value="desempleado"> Sin trabajo</option>
+                </select>
+            </div>
+
+            <div>
+                <p>Género</p>
+                <label>
+                    <input type="radio" value="femenino" name="genero"> Femenino
+                </label>
+                <br>
+                <label>
+                    <input type="radio" value="masculino" name="genero"> Masculino
+                </label>
+                <br>
+                <label>
+                    <input type="radio" value="otro" name="genero"> Otro
+                </label>
+            </div>
+
+            <div>
+                <p>Productos de nuestra marca que consumiste este ultimo año <span>(puedes elegir mas de uno):</span> </p>
+                <label>
+                    <input type="checkbox" value="tallarines" name="productos"> Tallarines
+                </label>
+                <br>
+                <label>
+                    <input type="checkbox" value="coditos" name="productos"> Coditos
+                </label>
+                <br>
+                <label>
+                    <input type="checkbox" value="ravioles" name="productos"> Ravioles
+                </label>
+                <br>
+                <label>
+                    <input type="checkbox" value="ñoquis" name="productos"> Ñoquis
+                </label>
+                <br>
+                <label>
+                    <input type="checkbox" value="sorrentinos" name="productos"> Sorrentinos
+                </label>
+                <br>
+                <label>
+                    <input type="checkbox" value="lasagna" name="productos"> Lasagna
+                </label>
+                <br>
+                <label>
+                    <input type="checkbox" value="macarrones" name="productos"> Macarrones
+                </label>
+                <br>
+            </div>
+
+            <div>
+                <p>Escribenos alguna sugerencia, estamos tomando nota</p>
+                <textarea class="caja-comentarios" name="comentarios" placeholder="Deja tu comentario aquí..."></textarea>
+            </div>
+
+            <div>
+                <button type="submit" id="submit">Enviar</button>
+            </div>
+
+        </form>
+    </div>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
